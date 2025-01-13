@@ -15,7 +15,7 @@ public class ClienteRestPersona {
 	@RequestMapping("/personas_cliente")
 	public List<PersonaDto> listaPersonas(){
 		RestTemplate templ = new RestTemplate();
-		PersonaDto[] lista = templ.getForObject("http://mired:7070/personas", PersonaDto[].class);
+		PersonaDto[] lista = templ.getForObject("http://webspring:7070/personas", PersonaDto[].class);
 		return Arrays.asList(lista);
 	}
 }
